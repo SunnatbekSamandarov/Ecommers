@@ -1,0 +1,56 @@
+{%extends 'base.html' %}
+{%load static%}
+{% block content  %}
+    <div class="head" style="background-image: url(img/head3.jpg);">
+        <div class="head_caption">
+            <h1>Формы</h1>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Формы</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="whitebox">
+                <form action="#">
+                    <div class="form_title">Регистрация</div>
+                    <div class="form_input row">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Имя">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Фамилия">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Имя пользователя">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Эл. адрес">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Пароль">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Подтвердите пароль">
+                        </div>
+                    </div>
+                    <input type="submit" value="Зарегистрироваться">
+                </form>
+            </div>
+            <div class="whitebox mini">
+                <form action="#">
+                    <div class="form_title">Войти</div>
+                    <div class="form_input">
+                        <input type="text" placeholder="Имя пользователя">
+                        <input type="text" placeholder="Пароль">
+                    </div>
+                    <input type="submit" value="Войти">
+                    <p class="reg">Нет аккаунта? <a href="#">Зарегистрируйтесь.</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

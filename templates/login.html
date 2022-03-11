@@ -1,0 +1,30 @@
+{%extends 'base.html' %}
+{%load static%}
+{% block content  %}
+    <div class="head" style="background-image: url({%static 'img/head3.jpg'%});">
+        <div class="head_caption">
+            <h1>Войти</h1>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="whitebox mini">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form_title">Войти</div>
+                    <div class="form_input">
+                        {%for form in forms%}
+                        {{form.label_tag}} {{form}}
+                        {%endfor%}
+
+                    </div>
+                    <input type="submit" value="Войти">
+                    <p class="reg">Нет аккаунта? <a href="{% url 'register' %}">Зарегистрируйтесь.</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

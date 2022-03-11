@@ -1,0 +1,39 @@
+{%extends 'base.html' %}
+{%load static%}
+{% block content  %}
+    <div class="head" style="background-image: url({%static 'img/head3.jpg'%});">
+        <div class="head_caption">
+            <h1>Регистрация</h1>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="whitebox">
+                <form  method="post">
+                    {% csrf_token %}
+                    <div class="form_title">Регистрация</div>
+                    <div class="form_input row">
+                        {%for form in forms%}
+                        <div class="col-md-6">
+                          {{form.label_tag}}{{form}}
+                        </div>
+                            {%endfor%}
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <input type="submit" value="Зарегистрироваться">
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

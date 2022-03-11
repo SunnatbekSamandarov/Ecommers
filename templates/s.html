@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="products_box-info">
+
+        <div class="products_box-cat">{{product.name}}</div>
+
+        <a  href="#" id="sm">{{product.description}}</a>
+
+        <div class="products_box-price"><img src="{%static 'img/money.svg'%}" alt=""> {{product.price}}</div>
+     </div>
+     <button onclick="log()">ok</button>
+     <script>
+         let sm=document.getElementById('sm')
+         function log() {
+             console.log(sm);
+         }
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,193 @@
+{%extends 'base.html' %}
+{%load static%}
+
+
+{% block content  %}
+   <div class="container pos">
+      <div class="catb_list">
+         <div class="catb_item">
+            <a href="#" class="catb_img" style="background-image: url({%static 'img/slider.jpg'%});"></a>
+            <a href="#" class="catb_title">Помолвка и свадьба</a>
+         </div>
+         <div class="catb_item">
+            <a href="#" class="catb_img" style="background-image: url({%static 'img/slider.jpg)'%};"></a>
+            <a href="#" class="catb_title">Помолвка и свадьба</a>
+         </div>
+         <div class="catb_item">
+            <a href="#" class="catb_img" style="background-image: url({%static 'img/slider.jpg)'%};"></a>
+            <a href="#" class="catb_title">Помолвка и свадьба</a>
+         </div>
+         <div class="catb_item">
+            <a href="#" class="catb_img" style="background-image: url({%static 'img/slider.jpg)'%};"></a>
+            <a href="#" class="catb_title">Помолвка и свадьба</a>
+         </div>
+         <div class="catb_item">
+            <a href="#" class="catb_img" style="background-image: url({%static 'img/slider.jpg)'%};"></a>
+            <a href="#" class="catb_title">Помолвка и свадьба</a>
+         </div>
+      </div>
+      <div class="search_box">
+         <form action="">
+            <input type="text" placeholder="Поиск">
+            <button type="submit"><img src="{%static 'mg/search.svg'%}" alt=""></button>
+         </form>
+      </div>
+   </div>
+	<div class="slider">
+		<div class="slider_item">
+         <div class="slider_bg" style="background-image: url({%static 'img/slider.jpg'%});">
+
+         </div>
+			<div class="container">
+				<div class="slider_item-desc">
+					<div class="title">Новая <br> коллекция</div>
+					<div class="btitle">SOKOLOV </div>
+					<p>с перламутром и танцующим бриллиантом артикул, которое сделает образ Женщин более привлекательным</p>
+					<div class="flex">
+						<a href="#" class="more">Подробнее</a>
+						<a href="#" class="all">Посмотреть все</a>
+					</div>
+				</div>
+				<div class="slider_item-pro">
+					<div class="pro_list" id="pro_1">
+						<div class="pro_list-item">
+							<img src="{%static 'img/ring.jpg'%}" alt="">
+							<button class="tocart">+</button>
+						</div>
+						<div class="pro_list-item">
+							<img src="{%static 'img/ring.jpg'%}" alt="">
+							<button class="tocart">+</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="products sale">
+		<div class="container">
+         <div class="products_title">
+            <div class="products_title-name">НОВИНКИ</div>
+            <div class="products_title-cat">
+               <a href="#" class="active">Все</a>
+               {%for category in categorys%}
+               <a href="{%url 'product'%}">{{category.name}}</a>
+               {%endfor%}
+            </div>
+         </div>
+
+			<div class="products_list">
+                        {%for product in products%}
+				<div class="products_item">
+               <div class="products_box">
+                  <span class="saleinfo">10%</span>
+                  <button class="products_box-fav"><img src="{%static 'img/bfav.svg'%}" alt=""></button>
+                  <div class="products_box-img">
+
+                     <img src="{{product.image}}"width="186px" height="186px" alt="">
+
+                  </div>
+                  <button class="tocart">+</button>
+                  <div class="products_box-info">
+                     <div class="products_box-cat">{{product.name}}</div>
+                     <a href="{%url 'product'%}"
+
+                        style="
+                        display: -webkit-box;
+                         -webkit-box-orient: vertical;
+                          -webkit-line-clamp: 3;
+                            overflow: hidden;
+                             text-overflow: ellipsis;">
+                        {{product.description}}.</a>
+                     <div class="products_box-price"><img src="{%static 'img/money.svg'%}" alt=""> {{product.price}}</div>
+                  </div>
+               </div>
+                 </div>
+                 {%endfor%}
+
+		</div>
+   </div>
+   <div class="banner">
+      <div class="banner_img" style="background-image: url({%static 'img/banner.jpg'%});">
+         <div class="banner_caption">
+            <div class="banner_stitle">Коллекция украшений</div>
+            <div class="banner_title">Искушение</div>
+            <p>Золотые украшения с драгоценными камнями обладают особым магнетизмом и шармом, которыми их наделила сама природа</p>
+            <a href="#">Подробнее <img src="{%static 'img/right_arrow.svg'%}" alt=""></a>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="banner_4">
+               <a href="{%url 'product'%}" class="more">Посмотреть все</a>
+               <div class="sub">
+                  <p>Подпишитесь на рассылку и получите
+                     еще больше скидок от </p>
+                  <span>Suma-jewellery</span>   
+                  <form action="#">
+                     <input type="text" placeholder="Имя">
+                     <input type="text" placeholder="Email">
+                     <button type="submit">Подписаться <img src="{%static 'img/right_arrow.svg'%}" alt=""></button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="quote">
+      <div class="container">
+         <div class="quote_title">Отзывы</div>
+         <div class="quote_list">
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div>
+            </div>
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div>
+            </div>
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div> 
+            </div>
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+                  <img src="img/star.svg" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div>
+            </div>
+         </div>
+      </div>
+   </div>
+{% endblock %}

@@ -1,0 +1,170 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block content  %}
+<div class="head">
+        <div class="container pos">
+            <div class="head_caption full">
+                <h1>В Ташкенте впервые пройдёт ювелирная выставка</h1>
+                
+            </div>
+        </div>
+      </div>
+	<div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="#">Помолвка и свадьба</a></li>
+                <li>Золотое кольцо с фианитом</li>
+            </ul>
+        </div>
+    </div>
+   <div class="wrapper">
+       <div class="container">
+           <div class="product">
+               <div class="product_gal">
+                  <div class="product_gal-pict">
+                     {%for product in products%}
+                     <a href="#" style="background-image : url('/{{product.image}}');width: 515px; height:525;"></a>
+                      {%endfor%}
+<!--                     <a href="#" style="background-image: url({%static 'img/bigring.jpg)'%};"></a>-->
+<!--                     <a href="#" style="background-image: url({%static 'img/bigring.jpg)'%};"></a>-->
+<!--                     <a href="#" style="background-image: url({%static 'img/bigring.jpg)'%};"></a>-->
+<!--                     <a href="#" style="background-image: url({%static 'img/bigring.jpg)'%};"></a>-->
+                  </div>
+                  <div class="product_gal-nav">
+                     <div class="product_gal-list">
+                         {%for product in products%}
+                        <div class="item" style="background-image: url('/{{product.image}}'); "></div>
+                          {%endfor%}
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="product_info">
+                  <div class="product_articul">Артикул: <b>123546</b></div>
+                  <div class="product_title">Золотое кольцо «Бриллианты Якутии» </div>
+                  <div class="product_price">
+                     <b>920 000</b> сум
+                     <div class="old">
+                        1 220 000 сум
+                     </div>
+                  </div>
+                  <div class="product_size">
+                     <span>Размер:</span>
+                     <div class="product_size_list">
+                        <a href="#">15</a>
+                        <a href="#" class="active">15.5</a>
+                        <a href="#">16</a>
+                        <a href="#">16.5</a>
+                        <a href="#">16.5</a>
+                        <a href="#">16.5</a>
+                     </div>
+                  </div>
+                  <div class="product_btns">
+                     <button class="tocart">Добавить в корзину</button>
+                     <button class="payone">Купить в один клик</button>
+                  </div>
+                  <div class="product_fav">
+                     <button class="fav"><img src="{%static 'img/fav2.svg'%}" alt=""> Сохранить</button>
+                     <button class="share"><img src="{%static 'img/share.svg'%}" alt=""> Поделиться</button>
+                  </div>
+                  <span class="btitle">Описание</span>
+                  <p>Бренд: <a href="#">БРИЛЛИАНТЫ ЯКУТИИ</a> <br> 
+                     Страна производства: Россия <br>
+                     Модель: 0496-K5R-01 <br>
+                     Вставка: <a href="#">Бриллиант</a> <br> 
+                     Кольцо «Бриллианты Якутии» с 1 бриллиантом, 0.06 карат; Розовое золото 585 пробы <br> 
+                     Вес изделия: 1.14 г</p>
+                  <span class="btitle">Гарантия</span>
+                  <p>На все товары действует гарантия. Срок гарантии и другую информацию можно уточнить в службе поддержки клиентов.</p>   
+               </div>
+           </div>
+           <a href="#" class="bmore">Может понравиться </a>
+           <div class="products list">
+            <div class="row">
+               {%for product in products %}
+                 <div class="products_item">
+                  <div class="products_box">
+                     <span class="saleinfo">10%</span>
+                    <button class="products_box-fav"><img src="{%static 'img/bfav.svg'%}" alt=""></button>
+                     <div class="products_box-img">
+                        <img src="/{{product.image}}"width="186px" height="186px" alt="">
+                     </div>
+                     <button class="tocart">+</button>
+                     <div class="products_box-info">
+
+                                <div class="products_box-cat">{{product.name}}</div>
+
+                                <a  href="#" id="sm">{{product.description}}</a>
+
+                                <div class="products_box-price"><img src="{%static 'img/money.svg'%}" alt=""> {{product.price}}</div>
+                             </div>
+                             <button onclick="log()">ok</button>
+                             <script>
+                                 let sm=document.getElementById('sm')
+                                 function log() {
+                                     console.log(sm);
+                                 }
+                             </script>
+                  </div>
+                 </div>
+               {%endfor%}
+            </div>
+           </div>
+       </div>
+   <div class="quote">
+      <div class="container">
+         <div class="quote_title">Отзывы</div>
+         <div class="quote_list">
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div>
+            </div>
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2022 </div>
+               <div class="quote_who">Светлана Мошникова </div>
+            </div>
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div> 
+            </div>
+            <div class="quote_item">
+               <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+               <div class="quote_rate">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+                  <img src="{%static 'img/star.svg'%}" alt="">
+               </div>
+               <div class="quote_date">03 сентября 2020 </div>
+               <div class="quote_who">Светлана Мошникова </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ {%endblock%}

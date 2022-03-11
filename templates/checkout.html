@@ -1,0 +1,187 @@
+{%extends 'base.html' %}
+{%load static%}
+{% block content  %}
+    <div class="head" style="background-image: url(img/head3.jpg);">
+        <div class="head_caption">
+            <h1>Корзина</h1>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Корзина</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <form action="#" class="checkout">
+                        <div class="checkout_title">Контактная информация</div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Имя*">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Фамилия*">
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="checkout_title">Способ доставки</div>
+                        <div class="delivery row">
+                            <div class="col-md-6">
+                                <input type="radio" name="delivery" id="delivery-home" checked>
+                                <label for="delivery-home">
+                                    <div class="delivery-title">Доставка на дом или в офис</div>
+                                    <p>Товар будет доставлен в удобное для Вас место.</p>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" name="delivery" id="delivery-own">
+                                <label for="delivery-own">
+                                    <div class="delivery-title">Самовывоз через курьерские точки</div>
+                                    <p>Доставка вдвойне быстрее!</p>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <select name="#" id="">
+                                    <option value="">Выберите город</option>
+                                    <option value="">Ташкент</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <select name="#" id="">
+                                    <option value="">Выберите район</option>
+                                    <option value="">Чиланзар</option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" placeholder="Улица*">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Номер дома*">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Квартира">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Подъезд">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" placeholder="Этаж">
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="checkout_title">Способы оплаты</div>
+                        <div class="payment">
+                            
+                            <input type="radio" name="payment" id="payment-home" checked>
+                            <label for="payment-home">
+                                <div class="payment-title">Оплата при получение заказа</div>
+                                <p>Оплата принимается в узбекских сумах, в момент получение заказа. (*Внимание: имеется комиссия за данную услугу)</p>
+                            </label>
+                        
+                            <input type="radio" name="payment" id="payment-own">
+                            <label for="payment-own">
+                                <div class="payment-title">Оплата через Click</div>
+                            </label>
+                            
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="carts_sum">
+                        <span class="carts_sum-title">Детали заказа
+                        </span>
+                        <hr>
+                        <div class="carts_sum-item">
+                            <span>Выбранный способ доставки и оплаты</span>
+                            <span>Доставка на дом или в офис</span>
+                        </div>
+                        <hr>
+                        <div class="carts_sum-title">Доставка</div>
+                        <div class="carts_sum-item">
+                            <span>Тип доставки:</span>
+                            <span>Стандарт</span>
+                        </div>
+                        <div class="carts_sum-item">
+                            <span>Способ оплаты:</span>
+                            <span>Оплата при получение заказа</span>
+                        </div>
+                        <hr>
+                        <div class="carts_sum-item">
+                            <span>Итого</span>
+                            <span>860 000 сум</span>
+                        </div>
+                        <a href="#">Оформить заказ</a>
+                        <span class="carts_sum-info">Нажимая "Оформить заказ", я соглашаюсь с публичным <a href="#">договором оферты</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quote">
+        <div class="container">
+            <div class="quote_title">Отзывы</div>
+            <div class="quote_list">
+                <div class="quote_item">
+                    <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить
+                        благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо
+                        за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+                    <div class="quote_rate">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                    </div>
+                    <div class="quote_date">03 сентября 2020 </div>
+                    <div class="quote_who">Светлана Мошникова </div>
+                </div>
+                <div class="quote_item">
+                    <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить
+                        благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо
+                        за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+                    <div class="quote_rate">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                    </div>
+                    <div class="quote_date">03 сентября 2020 </div>
+                    <div class="quote_who">Светлана Мошникова </div>
+                </div>
+                <div class="quote_item">
+                    <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить
+                        благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо
+                        за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+                    <div class="quote_rate">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                    </div>
+                    <div class="quote_date">03 сентября 2020 </div>
+                    <div class="quote_who">Светлана Мошникова </div>
+                </div>
+                <div class="quote_item">
+                    <p>Провожу отпуск в Ташкенте,сегодня зашла в ваш магазин, приобрела серёжки, хочу выразить
+                        благодарность за отличную консультацию девушки продавца, к сожалению имя не запомнила. Спасибо
+                        за её внимательность и терпение, я очень долго не могла определиться с выбором!</p>
+                    <div class="quote_rate">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                        <img src="img/star.svg" alt="">
+                    </div>
+                    <div class="quote_date">03 сентября 2020 </div>
+                    <div class="quote_who">Светлана Мошникова </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}
